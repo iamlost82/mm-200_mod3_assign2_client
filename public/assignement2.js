@@ -1,1 +1,0 @@
-let task01Btn = document.getElementById('task1Btn');

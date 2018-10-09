@@ -2,23 +2,24 @@ let responseDiv = document.getElementById('responseDiv');
 let leapYearInput = document.getElementById('leapYearInput');
 let leapYearCheckBtn = document.getElementById('leapYearCheckBtn');
 
-//Handle buttonclick
 leapYearCheckBtn.addEventListener('click', function(){
+    responseDiv.className = '';
     let inputYear = leapYearInput.value;
     let response = {success:true};
-    //Validate input
-    if(inputYear === ""){
-        response = {success:false,msg:`<p>Error:Input can't be blank!</p>`}
+    if(inputYear === ''){
+        response = {success:false,msg:`<p>Error:Input can't be blank!</p>`,class:'error'}
     }
-    //if input is ok, continue leapyeartest
     if(response.success===true){
         if(checkLeapYear(inputYear) === true){
+            response.class = 'success';
             response.msg = `<p>The year ${inputYear} is a leap year!</p>`;
         } else{
+            response.class = 'info';
             response.msg = `<p>The year ${inputYear} is NOT a leap year</p>`;
         }
         
     }
+    responseDiv.className = response.class;
     responseDiv.innerHTML = response.msg;
 });
 function checkLeapYear(year){

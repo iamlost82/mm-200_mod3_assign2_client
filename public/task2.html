@@ -5,29 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="assignement2.css">
-    <title>MM-200, Mod 3, assignement 2, Clientside, Task 2</title>
+    <link rel="stylesheet" href="css/assignement2.css">
+    <title>MM-200, Mod 3, assignement 2, Clientside, Task 1</title>
 </head>
 <body>
-    <div class="container">
-        <header class="myHeader"><h1>Task 2:</h1></header>
-        <h3>A:</h3>
-        <p>The first two examples will create the object "myPoint" with the properties "x","y" and "z" as one command.</p>
-        <p>The last one will in the first line of code, create and empty Object named "myPoint"<br>
-        Then it will execute 3 more lines that defines a property for the object</p>
-        <h3>B:</h3>
-        <p>First line: creates the object "myPoint"</p>
-        <p>The next 3 lines defines properties in "myPoint"</p>
-        <p>The nest lines defines a method in "myPoint" that will incease the value of "myPoint.z" with 5.</p>
-        <p>The last two lines of code runs the method withing "myPoint" and then console.logs the changed property.</p>
-        <h3>C:</h3>
-        <p>The function createPoint, creates a javascript Object with 3 properties. The 3 properties are put in as object properties, and you also add a method. Finally the function return the created object.</p>
-        <p>"myPoint1" = createPoint(23,12,10) will run the function as described above and "myPoint1" will then be a object with the properties x = 23, y = 12 and z=10, and a method for increasing the height of the z property.</p>
-        <p>"myPoint2" = createPoint(45,17,22) works as described above but now with other x y and z values</p>
-        <p>The third last line of code will run a method in the object myPoint1, witch increases the value of the z property with 5</p>
-        <p>The last two lines console.logs the values of the to points "myPoint1" and "myPoint2". They should now be:</p>
-        <p>myPoint1 = {x:23,y:12,z:15,increaseHeight:...method...}</p>
-        <p>myPoint1 = {x:45,y:17,z:22,increaseHeight:...method...}</p>
+    <div class="header"><h2>MM-200, Module 3</h2></div>
+    <div class="navigation" id="navigationmenu">
+        <button id="task01Btn" type="button">Task 01</button>
+        <button id="task02Btn" type="button" class="active">Task 02</button>
+        <button id="task03Btn" type="button">Task 03</button>
+        <button id="task04Btn" type="button">Task 04</button>
+        <button id="task05Btn" type="button">Task 05</button>
+        <button id="task06Btn" type="button">Task 06</button>
+        <button id="task07Btn" type="button">Task 07</button>
+        <button id="task08Btn" type="button">Task 08</button>
+        <button id="task09Btn" type="button">Task 09</button>
+        <button id="task10Btn" type="button">Task 10</button>
     </div>
+    <div class="content">
+            <fieldset>
+                    <legend>A:</legend>
+                    <ul>
+                        <li>The first two examples creates a new object with it's parameters</li>
+                        <li>The last example first creates and empty object</li>
+                        <li>Then it populates theobject with parameters for x,y and z</li>
+                    </ul>
+                </fieldset>
+        
+                <fieldset>
+                        <legend>B:</legend>
+                        <ul>
+                            <li>First line creates an empty object</li>
+                            <li>Next lines populates the object</li>
+                            <li>The "increaseHeight" part adds a method to the object</li>
+                            <li>The function will raise the z property by 5</li>
+                            <li>Last two lines executes the method and console logs the answer(15)</li>
+                        </ul>
+                    </fieldset>        
+                    <fieldset>
+                            <legend>C:</legend>
+                            <ul>
+                                <li>First lines creates a function createPoint witch can take 3 parametes</li>
+                                <li>The function first creates an empty Object "myPoint"</li>
+                                <li>It then populates the object with x,y and z properties from the input values</li>
+                                <li>Then a method to increase z value by 5 is added to the object</li>
+                                <li>Finally the function returns the myPoint object</li>
+                                <li>The next two lines creates to objects myPoint1 and myPoint2 and uses the function to populate it</li>
+                                <li>Then you run the method on myPoint1, increasing myPoint1's z value by 5</li>
+                                <li>The last two lines console logs the result of the two objects</li>
+                                <li>myPoint1 = {x:23,y:12,z:15,increaseHeight:...method...}</li>
+                                <li>myPoint1 = {x:45,y:17,z:22,increaseHeight:...method...}</li>
+                            </ul>
+                        </fieldset>
+    </div>
+    <div class="footer"><h3>MM-200, fall 2018, Otto André Haaland</h3></div>
 </body>
+<script src="js/navigation.js"></script>
 </html>

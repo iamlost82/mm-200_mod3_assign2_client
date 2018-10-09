@@ -2,10 +2,12 @@
   "name": "module3_a2_monday",
   "version": "1.0.0",
   "description": "MM-200, Module 3, assignement 2, Clientside",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Otto André Haaland",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  }
 }

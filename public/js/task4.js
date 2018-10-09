@@ -1,8 +1,3 @@
-//Task 4, A:
-//Constructor
-
-//Task 4, B:
-//No, we only need to know the documentation on the function
 
 //Task 4, C:
 let testDate = new Date(1931,9,20);
@@ -12,6 +7,7 @@ if(weekDay === 0){
 } else{
     console.log("Not Sunday!!!");
 }
+
 
 //Task 4, D:
 let testDate2 = Date.now();

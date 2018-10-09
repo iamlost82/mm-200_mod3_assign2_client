@@ -1,0 +1,55 @@
+fieldset{
+    border: #099ca7 solid 3px;
+    padding: 20px;
+}
+legend{
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+input{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+#leapYearCheckBtn{
+    width: 100%;
+    border: 1px solid #000000;
+    background-color: #253a79;
+    color: #f0f8ff;
+    font-size: 1.2em;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+#leapYearCheckBtn:hover {
+    background-color: #3d66e2;
+    color: #f0f8ff;
+}
+#leapYearCheckBtn:active {
+    background-color: #3a4770;
+    color: #f0f8ff;
+}
+#responseDiv{
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+
+}
+.error{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+.success{
+    background-color: #09c929;
+    color: #ffffff;
+}
+.info{
+    background-color: #00a5f1;
+    color: #ffffff;
+}
