@@ -16,3 +16,5 @@ Then you will be much more able to understand and explain the code.
 Note 3: The points values for each task indicates the workload and/or level of difficulty/complexity
 
 [Link to assignement](https://github.com/iamlost82/mm-200_mod3_assign2_client/blob/master/public/background_documentation/MandatoryExercise2.pdf)
+
+[Link to working demo on Heroku](https://mm200-mod3-a2-clientside.herokuapp.com/)
