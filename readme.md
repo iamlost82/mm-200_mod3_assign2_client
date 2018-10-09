@@ -9,5 +9,7 @@ During the approval you must expect questions about the code. You should be able
 The approval can be done after the hand-in deadline in Canvas, but before the project period.
 
 Note 1: Don’t wait too long with the approval – it is easy to forget details in the code.
+
 Note 2: You can look at examples and read documentation on Internet, but you should write all the code yourself. Then you will be much more able to understand and explain the code.
+
 Note 3: The points values for each task indicates the workload and/or level of difficulty/complexity
