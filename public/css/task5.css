@@ -1,0 +1,76 @@
+fieldset{
+    border: #099ca7 solid 3px;
+    padding: 20px;
+}
+legend{
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+input{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+select{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+#generateCalenderBtn{
+    width: 100%;
+    border: 1px solid #000000;
+    background-color: #253a79;
+    color: #f0f8ff;
+    font-size: 1.2em;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+#generateCalenderBtn:hover {
+    background-color: #3d66e2;
+    color: #f0f8ff;
+}
+#generateCalenderBtn:active {
+    background-color: #3a4770;
+    color: #f0f8ff;
+}
+ul{
+    list-style: none;
+    width: 100%;
+}
+li{
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.day{
+
+    border-top: #000000 solid 2px;
+    border-left: #000000 solid 2px;
+    border-right: #000000 solid 2px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.weekday{
+    border-bottom: #000000 solid 2px;
+    border-left: #000000 solid 2px;
+    border-right: #000000 solid 2px;
+}
+.sunday {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-bottom: #000000 solid 2px;
+    border-left: #000000 solid 2px;
+    border-right: #000000 solid 2px;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+}

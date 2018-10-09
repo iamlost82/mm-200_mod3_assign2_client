@@ -24,7 +24,20 @@
         <button id="task10Btn" type="button">Task 10</button>
     </div>
     <div class="content">
-
+        <fieldset>
+            <legend>Input month and year:</legend>
+            <label for="monthSelect">Select month from list:</label>
+            <select id="monthSelect" name="monthSelect" size="1">
+            </select>
+            <label for="yearInput">Input year:</label>
+            <input id="yearInput" type="number" placeholder="ex: 2018" min="0" max="5000">
+            <button type="button" id="generateCalenderBtn">Generate calender</button>
+        </fieldset>
+        <br>
+        <fieldset>
+            <div id="calenderDiv">
+            </div>
+        </fieldset>
     </div>
     <div class="footer"><h3>MM-200, fall 2018, Otto André Haaland</h3></div>
 </body>
