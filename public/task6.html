@@ -24,7 +24,56 @@
         <button id="task10Btn" type="button">Task 10</button>
     </div>
     <div class="content">
+        <fieldset>
+            <legend>A:</legend>
+            <ul>
+                <li>Fancychart seems to be a constructor-function</li>
+                <li>It uses the keyword "new" to initialize a new object from FancyChart</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>B:</legend>
+<pre>
+<code>
+let cnv = document.getElementById('myCanvas');
 
+// User documentation says as above, but no getContext('2d') is called,
+// if it doesn't work use the one below instead...
+// let cnv = document.getElementById('myCanvas').getContext('2d');
+
+let myChart = new FancyChart(cnv,[23,56,130,44,30]);
+myChart.drawPieChart();
+myChart.setPieColor('red','blue','green','pink','orange');                   
+</code>
+</pre>
+        </fieldset>
+        <fieldset>
+            <legend>C:</legend>
+            <ul>
+                <li>The function Chart from Chart.js seems to be a constructor function</li>
+                <li>It uses the keyword "new" to initialise a new object from Chart</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>D:</legend>
+<pre>
+<code>
+let ctx = document.getElementById('myCanvas').getContext('2d');
+let myChart = new Chart(ctx,{
+    type: 'doughnut',
+    data: {
+        labels: ["Yes","No","Don't know"],
+        datasets: [{
+            data:[45,35,20],
+            backgroundColor:['#eaab2d','#7b2615','#f1c5cd']
+        }]
+    }
+});
+
+</code>
+</pre>
+        </fieldset>
+        
     </div>
     <div class="footer"><h3>MM-200, fall 2018, Otto André Haaland</h3></div>
 </body>
