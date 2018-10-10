@@ -96,3 +96,8 @@ label{
     font-weight: bold;
     font-size: 1.2em;
 }
+pre{
+    background-color: #c2c2c2;
+    border: #000000 solid 1px;
+    padding: 10px;
+}
