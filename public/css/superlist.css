@@ -1,0 +1,55 @@
+ul.superListStyle {
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 1.5em;    
+    border: 1px solid grey;
+    padding: 5px;    
+}
+
+ul.superListStyle>li {    
+    cursor: pointer;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+    user-select: none;
+}
+
+ul.superListStyle>:last-child {
+    border-bottom: none;
+}
+
+ul.superListStyle>li:hover {
+    box-shadow: 0 0 5px lightgrey;
+}
+
+ul.superListStyle>li:focus {
+    outline: none;
+}
+
+.sunny {
+    background-color: yellow;
+    color: darkorange;
+}
+
+.sunnyhighlight {
+    background-color: darkorange;
+    color: white;
+}
+
+.forest {
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+.foresthighlight {
+    background-color: yellowgreen;
+    color: seagreen;
+}
+.candy {
+    background-color: #712581;
+    color: #cf5994;
+}
+
+.candyhighlight {
+    background-color: #832dd3;
+    color: #b933ba;
+}

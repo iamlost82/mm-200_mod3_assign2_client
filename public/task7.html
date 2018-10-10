@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/assignement2.css">
     <link rel="stylesheet" href="css/task7.css">
+    <link rel="stylesheet" href="css/superlist.css">
     <title>MM-200, Mod 3, assignement 2, Clientside, Task 1</title>
 </head>
 <body>
@@ -24,10 +25,46 @@
         <button id="task10Btn" type="button">Task 10</button>
     </div>
     <div class="content">
-
+        <fieldset>
+            <legend>A:</legend>
+            <ul>
+                <li>Super list seems to be a factory function</li>
+                <li>It is not initialized with a "new" command</li>
+                <li>It also states in the pdf that it is a factory function</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>B:</legend>
+            <div id="myFirstListDiv"></div>
+            <div id="mySecondListDiv"></div>
+        </fieldset>
+        <fieldset>
+            <legend>C:</legend>
+            <div id="myThirdListDiv"></div>
+        </fieldset>
+        <fieldset>
+            <legend>D:</legend>
+<p>Added following code to superlist.js</p>
+<pre><code>
+// getLength --------------------------------------
+ul.getLength = function(){
+    return arr.length;
+}
+</code></pre>
+<p>And this to my own js file</p>
+<pre><code>
+let arrLengthDiv = document.getElementById('arrLengthDiv');
+myListItems = ["Bread","Sugar","Coffee","Milk"];
+let myFirstList = superlist(myListItems);
+arrLengthDiv.innerHTML = `The number of items is: ${myFirstList.getLength()}`;
+</code></pre>
+<p>Result of running new function is the line below:</p>
+<p id="arrLengthDiv"></p>
+        </fieldset>
     </div>
     <div class="footer"><h3>MM-200, fall 2018, Otto André Haaland</h3></div>
 </body>
 <script src="js/navigation.js"></script>
+<script src="js/superlist.js"></script>
 <script src="js/task7.js"></script>
 </html>
