@@ -26,5 +26,5 @@ document.getElementById('task09Btn').addEventListener('click', function(){
     window.location.href = "task9.html"
 });
 document.getElementById('task10Btn').addEventListener('click', function(){
-    window.location.href = "task10.html"
+    window.location.href = "task10a.html"
 });
