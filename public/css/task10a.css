@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    display: grid;
+    grid-template: 
+        'header header header header header header'
+        'banner banner banner banner banner banner'
+        'left left left right right right'
+        'footer footer footer footer footer footer';
+    grid-template-rows: 80px auto auto 80px;
+    text-align: center;
+    height: 100vh;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.div1{
+    grid-area: header;
+    background-color: #ffffcc;
+    padding: 20px;
+}
+.div2{
+    grid-area: banner;
+    background-color: #ffcccc;
+    padding: 20px;
+}
+.div3{
+    grid-area: left;
+    background-color: #ff99ff;
+    padding: 20px;
+}
+.div4{
+    grid-area: right;
+    background-color: #ff99cc;
+    padding: 20px;
+}
+.div5{
+    grid-area: footer;
+    background-color: #ffcc99;
+    padding: 20px;
+}
+button {
+    border: 1px solid #000000;
+    background-color: #253a79;
+    padding: 10px;
+    color: #f0f8ff;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+button.active {
+    background-color: #617bc2;
+    color: #f0f8ff;
+}
+button:hover {
+    background-color: #3d66e2;
+    color: #f0f8ff;
+}
+button:active {
+    background-color: #3a4770;
+    color: #f0f8ff;
+}
+@media only screen and (orientation: landscape) {
+    .container{
+        display: grid;
+        grid-template: 
+            'header header header header header header'
+            'banner banner banner left left left'
+            'banner banner banner right right right'
+            'footer footer footer footer footer footer';
+        grid-template-rows: 80px auto auto 80px;
+        text-align: center;
+        height: 100vh;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+}
