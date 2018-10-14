@@ -10,7 +10,10 @@ function FancyChart(canvas, array){
     this.drawingType = '';
     let canvasOffsetLeft = this.canvas.offsetLeft;
     let canvasOffsetTop = this.canvas.offsetTop;
+    let canvasCenterX = this.canvas.width / 2;
+    let canvasCenterY = this.canvas.height / 2;
     let barLimits = this.barLimits;
+    let pieLimits = this.pieLimits;
     this.barclicker = function (e){
         let event = new Event("barselect");
         let canvasMouseX = e.clientX-canvasOffsetLeft;
@@ -22,6 +25,25 @@ function FancyChart(canvas, array){
                 event.index = i;
                 event.value = barLimits[i].value;
                 break;
+            }
+        }
+        this.dispatchEvent(event);
+    }
+    this.pieclicker = function (e){
+        let event = new Event("pieselect");
+        let canvasMouseX = e.clientX-canvasOffsetLeft;
+        let canvasMouseY = e.clientY-canvasOffsetTop;
+        let radian = Math.atan2(canvasMouseY - canvasCenterX, canvasMouseX - canvasCenterY);
+        if(radian < 0){radian = 2*Math.PI + radian}
+        event.index = 'None selected';
+        event.value = 'None selected';
+        if(Math.sqrt((canvasMouseX-250)*(canvasMouseX-250)+(250-canvasMouseY)*(250-canvasMouseY))<240){
+            for(i in pieLimits){
+                if(radian >= pieLimits[i].minrad && radian < pieLimits[i].maxrad){
+                    event.index = pieLimits[i].index;
+                    event.value = pieLimits[i].value;
+                    break;
+                }
             }
         }
         this.dispatchEvent(event);
@@ -81,6 +103,7 @@ FancyChart.prototype.drawPieChart = function(){
     ctx.strokeStyle = this.strokeColor;
     let lastEndPoint = 0;
     for(i in this.values){
+        this.pieLimits.push({index:i,minrad:lastEndPoint,maxrad:(lastEndPoint + (Math.PI * 2 * (this.values[i]/totalValue))),value:this.values[i]});
         ctx.fillStyle = this.fillColorArray[i];
         ctx.beginPath();
         ctx.moveTo(centerx,centery);
@@ -90,6 +113,7 @@ FancyChart.prototype.drawPieChart = function(){
         ctx.stroke();
         lastEndPoint += Math.PI * 2 * (this.values[i] / totalValue);
     }
+    this.canvas.onclick = this.pieclicker;
 }
 
 FancyChart.prototype.setValues = function(newArray){
