@@ -1,11 +1,31 @@
 function FancyChart(canvas, array){
     this.canvas = canvas;
     this.values = array;
+    this.barLimits = [];
+    this.pieLimits = [];
     this.fillColorArray = [];
     this.fillColor = '#ffaa00';
     this.strokeColor = '#aa0000';
     this.lineWidth = 1;
     this.drawingType = '';
+    let canvasOffsetLeft = this.canvas.offsetLeft;
+    let canvasOffsetTop = this.canvas.offsetTop;
+    let barLimits = this.barLimits;
+    this.barclicker = function (e){
+        let event = new Event("barselect");
+        let canvasMouseX = e.clientX-canvasOffsetLeft;
+        let canvasMouseY = e.clientY-canvasOffsetTop;
+        event.index = 'None selected';
+        event.value = 'None selected';
+        for(i in barLimits){
+            if(canvasMouseX >= barLimits[i].xmin && canvasMouseX <= barLimits[i].xmax && canvasMouseY <= barLimits[i].ymin && canvasMouseY >= barLimits[i].ymax){
+                event.index = i;
+                event.value = barLimits[i].value;
+                break;
+            }
+        }
+        this.dispatchEvent(event);
+    }
 }
 
 FancyChart.prototype.fillOutPieColorArray = function(){
@@ -37,11 +57,12 @@ FancyChart.prototype.drawBarChart = function(){
     let x = 4;
     for(let i = 0; i < numberOfBars; i++){
         let barHeight = values[i];
+        this.barLimits.push({index:i,xmin:x,xmax:(x+barWidth),ymax:(this.canvas.height - barHeight),ymin:(this.canvas.height),value:values[i]});
         ctx.fillRect(x, this.canvas.height - barHeight, barWidth, barHeight);
         ctx.strokeRect(x, this.canvas.height - barHeight, barWidth, barHeight);
         x = x + (barWidth + barDistance);
     }
-
+    this.canvas.onclick = this.barclicker;
 }
  
 FancyChart.prototype.drawPieChart = function(){
